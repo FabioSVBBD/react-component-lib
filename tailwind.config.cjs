@@ -2,7 +2,11 @@
 module.exports = {
   content: ['./src/**/*.{tsx,stories.tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      minWidth: {
+        button: '8rem',
+      },
+    },
   },
   plugins: [],
 };
