@@ -9,6 +9,7 @@
   "scripts": {
     "build": "rollup -c",
     "storybook": "start-storybook -p 6006",
+    "storybook-docs": "start-storybook --docs --no-manager-cache",
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
@@ -17,14 +18,17 @@
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-typescript": "^11.0.0",
     "@storybook/addon-actions": "^6.5.15",
+    "@storybook/addon-docs": "^6.5.15",
     "@storybook/addon-essentials": "^6.5.15",
     "@storybook/addon-interactions": "^6.5.15",
     "@storybook/addon-links": "^6.5.15",
     "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/addons": "^6.5.15",
     "@storybook/builder-webpack4": "^6.5.15",
     "@storybook/manager-webpack4": "^6.5.15",
     "@storybook/react": "^6.5.15",
     "@storybook/testing-library": "^0.0.13",
+    "@storybook/theming": "^6.5.15",
     "@types/classnames": "^2.3.1",
     "@types/react": "^18.0.26",
     "autoprefixer": "^10.4.13",

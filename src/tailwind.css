@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.transform-label {
+  transform: translateY(-22px) translateX(-8px) scale(0.75);
+}

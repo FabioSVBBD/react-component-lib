@@ -1,25 +1,44 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
-
 import { Button, ButtonProps } from './Button';
+import {
+  Title,
+  Subtitle,
+  Description,
+  Primary,
+  ArgsTable,
+  Stories,
+  PRIMARY_STORY,
+} from '@storybook/addon-docs';
 
 export default {
-  title: 'Demo Library/Button',
+  title: 'Design System/Atoms/Button',
   component: Button,
   argTypes: {},
+  parameters: {
+    docs: {
+      page: () => (
+        <>
+          <Title />
+          <Subtitle>Simple Button</Subtitle>
+          <Description>
+            A button with different styling configs that takes events
+          </Description>
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
+    },
+  },
 } as Meta<typeof Button>;
 
 const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const PrimaryButton = Template.bind({});
+PrimaryButton.storyName = 'Primary';
+PrimaryButton.args = {
   children: 'Primary button',
-};
-
-export const PrimaryExplicit = Template.bind({});
-PrimaryExplicit.args = {
-  children: 'Primary explicit button',
-  tier: 'primary',
 };
 
 export const Secondary = Template.bind({});
